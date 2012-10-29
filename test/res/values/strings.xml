@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">test</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="num">Enter a number</string>
+    <string name="result">Result</string>
+    <string name="plus">+</string>
+    <string name="aboutString">App developed By @kiranvm</string>
+    <string name="about">About</string>
+    <string name="minus">-</string>
+    <string name="multiply">*</string>
+    <string name="divide">/</string>
+
+</resources>

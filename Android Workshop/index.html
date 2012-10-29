@@ -1,0 +1,470 @@
+<!doctype html>
+
+<!--
+
+    Welcome to the light side of the source, young padawan.
+
+    One step closer to learn something interesting you are...
+
+                               ____                  
+                            _.' :  `._               
+                        .-.'`.  ;   .'`.-.           
+               __      / : ___\ ;  /___ ; \      __  
+             ,'_ ""--.:__;".-.";: :".-.":__;.--"" _`,
+             :' `.t""--.. '<@.`;_  ',@:` ..--""j.' `;
+                  `:-.._J '-.-'L__ `-- ' L_..-;'     
+                    "-.__ ;  .-"  "-.  : __.-"       
+                        L ' /.------.\ ' J           
+                         "-.   "--"   .-"            
+                        __.l"-:_JL_;-";.__           
+                     .-j/'.;  ;""""  / .'\"-.        
+                   .' /:`. "-.:     .-" .';  `.      
+                .-"  / ;  "-. "-..-" .-"  :    "-.   
+             .+"-.  : :      "-.__.-"      ;-._   \  
+             ; \  `.; ;                    : : "+. ; 
+             :  ;   ; ;                    : ;  : \: 
+             ;  :   ; :                    ;:   ;  : 
+            : \  ;  :  ;                  : ;  /  :: 
+            ;  ; :   ; :                  ;   :   ;: 
+            :  :  ;  :  ;                : :  ;  : ; 
+            ;\    :   ; :                ; ;     ; ; 
+            : `."-;   :  ;              :  ;    /  ; 
+             ;    -:   ; :              ;  : .-"   : 
+             :\     \  :  ;            : \.-"      : 
+              ;`.    \  ; :            ;.'_..--  / ; 
+              :  "-.  "-:  ;          :/."      .'  :
+               \         \ :          ;/  __        :
+                \       .-`.\        /t-""  ":-+.   :
+                 `.  .-"    `l    __/ /`. :  ; ; \  ;
+                   \   .-" .-"-.-"  .' .'j \  /   ;/ 
+                    \ / .-"   /.     .'.' ;_:'    ;  
+                     :-""-.`./-.'     /    `.___.'   
+                           \ `t  ._  /               
+                            "-.t-._:'                
+
+-->
+
+<!--
+    
+    So you'd like to know how to use impress.js?
+    
+    You've made the first, very important step -- you're reading the source code.
+    And that's how impress.js presentations are built -- with HTML and CSS code.
+    
+    Believe me, you need quite decent HTML and CSS skills to be able to use impress.js effectively.
+    And what is even more important, you need to be a designer, too, because there are no default
+    styles for impress.js presentations, there is no default or automatic layout for them.
+    
+    You need to design and build it by hand.
+    
+    So...
+    
+    Would you still like to know how to use impress.js?
+    
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Android App Development Worshop | MES CE</title>
+    
+    <meta name="description" content="A small hands on session on android app development to bring out those future app developers..:)" />
+    <meta name="@kiranvm" content="That usual andorid stuff" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <!--
+        
+        Impress.js doesn't depend on any external stylesheet. Script adds all styles it needs for
+        presentation to work.
+        
+        This style below contains styles only for demo presentation. Browse it to see how impress.js
+        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
+        you to use them directly in your presentation.
+        
+        Be creative, build your own. We don't really want all impress.js presentations to look the same,
+        do we?
+        
+        When creating your own presentation get rid of this file. Start from scratch, it's fun!
+        
+    -->
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<!--
+    
+    Body element is used by impress.js to set some useful class names, that will allow you to detect
+    the support and state of the presentation in CSS or other scripts.
+    
+    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
+    support features required by impress.js, so you should apply some fallback styles in your CSS.
+    It's not necessary to add it manually on this element. If the script detects that browser is not
+    good enough it will add this class, but keeping it in HTML means that users without JavaScript
+    will also get fallback styles.
+    
+    When impress.js script detects that browser supports all required features, this class name will
+    be removed.
+    
+    The class name on body element also depends on currently active presentation step. More details about
+    it can be found later, when `hint` element is being described.
+    
+-->
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+    
+    Now that's the core element used by impress.js.
+    
+    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
+    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
+    
+    You probably won't need it now, but there are some configuration options that can be set on this element.
+    
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+    
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+    
+    But as I said, you won't need it for now, so don't worry - there are some simple but interesing things
+    right around the corner of this tag ;)
+    
+-->
+<div id="impress">
+
+    <!--
+        
+        Here is where interesting thing start to happen.
+        
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+        
+        Positioning information is passed through data attributes.
+        
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+        
+        It will not be rotated or scaled.
+        
+    -->
+ <!--   //Original Slide 1
+
+<div id="bored" class="step slide" data-x="-1000" data-y="-1500">
+        <q><b>Android Application Development Workshop</b> </q>
+    </div>
+-->
+
+<div id="bored" class="step slide" data-x="-1500" data-y="-1500" style="text-align:center;" >
+        <q> <b> Android Application Development Workshop </b> </q>
+	<q> @ MES CE </q>
+    </div>
+
+    <!--
+        
+        The `id` attribute of the step element is used to identify it in the URL, but it's optional.
+        If it is not defined, it will get a default value of `step-N` where N is a number of slide.
+        
+        So in the example below it'll be `step-2`.
+        
+        The hash part of the url when this step is active will be `#/step-2`.
+        
+        You can also use `#step-2` in a link, to point directly to this particular step.
+        
+        Please note, that while `#/step-2` (with slash) would also work in a link it's not recommended.
+        Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
+        
+    -->
+    <div class="step slide" data-x="0" data-y="-1500" style="font-size:40px">
+	<center> <strong> Different Mobile Operating Systems </strong> </center>
+	<br/> <br/>        
+	<li>Android</li>
+	<br/>
+	<li>IOS</li>
+	<br/>	
+	<li>Symbian</li>
+	<br/>
+	<li>Windows</li>
+	<br/>
+	<li>Blackberry</li>
+	<br/>
+	<li>Bada OS</li>
+	
+    </div>
+<!--
+    <div class="step slide" data-x="1000" data-y="-1500">
+        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+    </div>
+-->
+
+    <!--
+        
+        This is an example of step element being scaled.
+        
+        Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
+        element will be 4 times larger than the others.
+        From presentation and transitions point of view it means, that it will have to be scaled
+        down (4 times) to make it back to it's correct size.
+        
+    -->
+    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+        <span class="try" style="text-align:center;">why</span>
+        <h1>Android?</h1>
+ <!--       <span class="footnote"><sup>*</sup> no rhyme intended</span> -->
+    </div>
+
+    <!--
+        
+        This element introduces rotation.
+        
+        Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
+        element should be rotated by 90 degrees clockwise.
+        
+    -->
+ <!--   <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+        <p>It's a <strong>presentation tool</strong> <br/>
+        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
+        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
+    </div>
+-->
+
+	<div id="defenition" class="step" data-x="-1500" data-y="3000" data-rotate="90" data-scale="5">
+        <p>Android is a mobile operating system based on <i>Linux kernel</i> developed by <strong>Google</strong> along with <strong> Open Handset Alliance </strong>.</p>
+    </div>
+
+	<div id="oha" class="step" data-x="1000" data-y="3000" data-rotate="90" data-scale="5">
+        <p>The <strong> Open Handset Alliance </strong> (OHA) is an association of 84 firms to develop open standards for mobile devices.</p>
+    </div>
+<!--
+    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+    </div>
+-->
+   
+	
+<div class="step slide" data-x="1000" data-y="-1500" style="font-size:40px">
+	<center> <strong> Why Android App Development? </strong> </center>
+	<br/> <br/>
+        <li>Android is open source platform.</li>
+	<br/>
+	<li>Zero restrictions.</li>
+	<br/>
+	<li>Community support and exhaustive documentation.</li>
+	<br/>	
+	<li>400 M activations!! (1 million new Android devices activated per day worldwide).</li>
+	<br/>	
+	<li>Supported by dozens of h/w manufacturers.</li>
+	
+    </div>
+
+<div class="step slide" data-x="2000" data-y="-1500" style="font-size:40px">
+	<center> <strong> Interesting Facts About Android </strong> </center>
+	<br/> <br/>
+        <li>Android wasn’t made by Google.</li>
+	<br/>	
+	<li>Android is Open Source.</li>	
+	<br/>
+	<li>It’s not even limited to phones - you could build a DVR, a handheld GPS, an MP3 player, etc.</li>	
+	<br/>
+	<li>The updates for Android are named after Pastries.</li>
+	
+	
+    </div>
+
+
+
+<div class="step slide" data-x="3000" data-y="-1500" style="font-size:40px">
+	<center> <img src="/home/kiran/Documents/Android Workshop/pictures/kkc.png" /> </center>
+</div>	
+
+<div class="step slide" data-x="4000" data-y="-1500" style="font-size:40px">
+	<center> <strong> Android Architecture </strong> </center>
+	<br/> <br/>
+ 	<center> <img src="/home/kiran/Documents/Android Workshop/pictures/Android-architecture.jpg" /> </center>
+    </div>
+
+
+
+
+ <!--
+        
+        And now it gets really exiting! We move into third dimension!
+        
+        Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with
+        `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
+        positioned far away from us (by 3000px).
+        
+    -->
+    <div id="coding" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+        <p><center> and let's do some <br/> <b>coding!!</b>  <center></p>
+    </div>
+
+<div class="step slide" data-x="8700" data-y="1000" style="font-size:40px">
+	<center> <strong> Tools Required </strong> </center>
+	<br/> <br/>
+	<li> Any OS. </li>
+	<br/>
+	<li> Eclipse IDE (Galileo or higher) </li>
+	<br/>
+	<li> ADT plugin </li>
+	<br/>
+	<li> Any Android Device </li> 	
+
+    </div>
+
+<div class="step slide" data-x="8700" data-y="2000" style="font-size:35px">
+	<center> <strong> Fundamentals </strong> </center>
+	<br/> <br/>
+	<li> An <u>Activity</u> represents a single screen with a user interface. </li>
+	<br/>
+	<li> A <u>Service</u> is a component that runs in the background to perform long-running operations. </li>
+	<br/>
+	<li> A <u>Content Provider</u> manages a shared set of application data.</li>
+	<br/>
+	<li> A <u>Broadcast Receiver</u> is a component that responds to system-wide broadcast announcements. </li> 	
+
+    </div>
+
+
+
+     <div id="stp1" class="step" data-x="6700" data-y="-300" data-scale="2">
+        <p><center> Setting up ADT and SDK.<center> </p>
+    </div>
+
+	<div id="stp2" class="step" data-x="8700" data-y="-300" data-scale="2">
+        <p> <center> Creating an emulator. </center> </p>
+    </div>
+
+	<div id="stp3" class="step" data-x="8700" data-y="-1300" data-scale="2">
+        <p> <center> Project Structure </center> </p>
+    </div>
+
+	<div id="stp4" class="step" data-x="6700" data-y="-1300" data-scale="2">
+        <p> <center> Hello Android!!</center> </p>
+    </div>
+
+	<div id="stp5" class="step" data-x="4500" data-y="2350" data-rotate="40" data-scale="2">
+        <p> <center> Let's build our own app.<sup>*</sup> </center> </p>
+	<br/> <br/> 
+	 <span class="footnote" style="font-size:20px"><center><sup>*</sup> mention logcat and DDMS</center></span>
+    </div>
+
+
+<!--    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+        <p>want to know more?</p>
+        <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
+    </div>
+-->
+
+<div class="step slide" data-x="8700" data-y="3000" style="font-size:40px">
+	
+ 	<center> <strong> Interesting fields for choosing a project. </center>
+	<br/> <br/>	
+	<li> Android Augmented Reality. </li>
+	<br/>
+	<li> Geo Spatial Solutions . </li>
+	<br/>
+	<li> Social Media. </li>
+	<br/>
+	<li> Near Field Communication. </li>
+	<br/>
+	<li> Crowd Sourcing. </li>
+    </div>
+
+
+	<div id="thankyou" class="step" data-x="3500" data-y="4000" >
+        <q><center><strong>Thank you for your patience.</strong></center></q>
+	<br/> <br/>
+	<center> <img src="/home/kiran/Documents/Android Workshop/pictures/mail.png" /> </center>
+        <q> <center> kiranvadakath@gmail.com </center> </q>
+    </div>
+  
+
+   
+  
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<!--
+    
+    Hint is not related to impress.js in any way.
+    
+    But it can show you how to use impress.js features in creative way.
+    
+    When the presentation step is shown (selected) its element gets the class of "active" and the body element
+    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
+    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
+    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
+    
+    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
+    the first step of presentation is visible for a couple of seconds.
+    
+    ...
+    
+    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
+    It's just a quick and dirty workaround to get different hint text for touch devices.
+    In a real world it should be at least placed in separate JS file ... and the touch content should be
+    probably just hidden somewhere in HTML - not hard-coded in the script.
+    
+    Just sayin' ;)
+    
+-->
+<!--
+<div class="hint">
+    <p>Use arrow keys or space bar to navigate</p>
+</div>
+-->
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<!--
+    
+    Last, but not least.
+    
+    To make all described above really work, you need to include impress.js in the page.
+    I strongly encourage to minify it first.
+    
+    In here I just include full source of the script to make it more readable.
+    
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because it should be done when the whole document is ready.
+    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+    
+-->
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+
+
+</body>
+</html>
+
+<!--
+    
+   Template used Impress.js . Visit https://github.com/bartaz/impress.js
+-->
+
+
+
